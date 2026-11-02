@@ -5,13 +5,13 @@
 class Trecs < Formula
   desc "A tool for recording and editing terminal sessions with precise timestamp\ncontrol.\n\n- Sharp at any size. A video is a grid of pixels: soft on a phone, blurry\nat full screen, unreadable once someone zooms in. A recording is text,\ndrawn fresh at whatever size the viewer has.\n\n- Kilobytes, not megabytes. The same session as a screen video runs to\nhundreds of megabytes. A recording loads at once, plays on a poor\nconnection and costs next to nothing to host.\n\n- The real thing, not a polished excerpt. Docs show the snippet someone\nchose to paste, and drift out of date. A recording shows the actual output\n, the actual error and the actual fix, right next to your written steps.\n\nThe editor allows you to:\n- Watch recording playback\n- Pause at any point\n- Edit command input and output\n- Delete commands\n- Save edited recordings with automatic timestamp compression"
   homepage ""
-  version "1.3"
+  version "1.4"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/solworktech/trecs/releases/download/v1.3/trecs_Darwin_x86_64.tar.gz"
-      sha256 "3d0391f24042c77a541e1fc8460851a9c80ef3ab963e3e72f4610d6f828e5bba"
+      url "https://github.com/solworktech/trecs/releases/download/v1.4/trecs_Darwin_x86_64.tar.gz"
+      sha256 "3cece639d81ef6fd192aa7a4deb8df5afbe24e4fd372a45961f9366314ac7822"
 
       define_method(:install) do
         bin.install "trecs"
@@ -19,8 +19,8 @@ class Trecs < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/solworktech/trecs/releases/download/v1.3/trecs_Darwin_arm64.tar.gz"
-      sha256 "7d1dd9ca94c1189f7b98942ff8e994888aec0414954432605b34ede5cd0dca10"
+      url "https://github.com/solworktech/trecs/releases/download/v1.4/trecs_Darwin_arm64.tar.gz"
+      sha256 "67065a0a1488640af505f6d11a69db5d413127abc623f45680b5440449a7a27e"
 
       define_method(:install) do
         bin.install "trecs"
@@ -31,16 +31,16 @@ class Trecs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/solworktech/trecs/releases/download/v1.3/trecs_Linux_x86_64.tar.gz"
-      sha256 "476202aeb997cb20b2bf71093252900299ab09d568cc79f4307e46dbac781dec"
+      url "https://github.com/solworktech/trecs/releases/download/v1.4/trecs_Linux_x86_64.tar.gz"
+      sha256 "6be732511d8021053ba20138c0c565312fb99616c100ce38a7b6d1526566d0bd"
       define_method(:install) do
         bin.install "trecs"
         bin.install "trecs-edit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/solworktech/trecs/releases/download/v1.3/trecs_Linux_arm64.tar.gz"
-      sha256 "fb6a7c9d5bc2fd879855b4db67d24ca5b38e3024166d6603ab9c2a8e14b4ae57"
+      url "https://github.com/solworktech/trecs/releases/download/v1.4/trecs_Linux_arm64.tar.gz"
+      sha256 "548fa425702c0880ccc5ac4a5937c2734915ca6f0b5709fad077f32e7e983015"
       define_method(:install) do
         bin.install "trecs"
         bin.install "trecs-edit"
